@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Qual'è il numero massimo?</h1>
+<form id="frm1" >
+ num1: <input type="text" name="Hbase" value="0"><br>
+ num2: <input type="text" name="HArrivo" value="0"><br>
+ num3: <input type="text" name="Hciao" value="0"><br><br>
+</form>
+
+<p>Controllo numero massimo:</p>
+<button onclick="myFunction()">Controllo del massimo:</button>
+
+<p>Il primo numero è:</p>
+<p id="base"></p>
+<p>Il secondo numero è:</p>
+<p id="arrivo"></p>
+<p>Il terzo numero è:</p>
+<p id="ciao"></p>
+
+Il massimo è di:
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+var x = document.getElementById("frm1");
+
+var base=x.elements[0].value;  
+  document.getElementById("base").innerHTML =base;
+
+var arrivo=x.elements[1].value;
+  document.getElementById("arrivo").innerHTML =arrivo;
+
+  var ciao=x.elements[2].value;
+  document.getElementById("ciao").innerHTML =ciao;
+
+  document.getElementById("demo").innerHTML =Dislivello
+  (base,arrivo,ciao);
+}
+
+function Dislivello(h1,h2,h3){
+if(h1>h2){
+  if(h1>h3){
+    return h1;
+  }
+  else{
+    return h3;
+  }
+}
+if(h2>h1){
+  if(h2>h3){
+    return h2;
+  }
+  else{
+    return h3;
+  }
+}
+if(h3>h1){
+  if(h3>h2){
+    return h3;
+  }
+  else{
+    return h2;
+  }
+}
+}
+</script>
+
+</body>
+</html>
