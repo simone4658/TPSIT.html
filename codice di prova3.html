@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+background-color: rgba(0, 197, 36, 1);
+}
+
+.miaScatola{
+background-color: yellow;
+width: 200px;
+height: 200px;
+margin: 5px;
+padding: 10px;
+border: 1px solid black;
+}
+#centrato{
+text-align: center;
+color: Blue;
+font-family: arial;
+margin: 0px;
+}
+
+.miaScatola2{
+background-color: yellow;
+width: 200px;
+height: 200px;
+margin: 5px;
+padding: 10px;
+border: 1px solid black;
+}
+#centrato2{
+text-align: center;
+color: Blue;
+font-family: arial;
+margin: 0px;
+}
+
+li{
+font-size: 15px;
+}
+
+</style>
+</head>
+<body>
+<h1>Sistemi Operativi</h1>
+
+<button type="button" onclick="alert('CIAO A TUTTI!')">Introduzione ai sistemi operativi con Javascript</button>
+<button type="button" onclick="document.getElementById('demo').innerHTML = Date()">CLICCA QUI PER SCOPRIRE DATA E ORA</button>
+<p id="demo"></p>
+
+<div class="miaScatola">
+<b><p id="centrato">Dispositivi di Input</p></b>
+<ul>
+  <li>Keyboard</li>
+  <li>Mouse</li>
+  <li>Microphone</li>
+  <li>Touchpad</li>
+  <li>Touch Screen</li>
+  <li>Graphic Board</li>
+  <li>USB port</li>
+  <li>WebCam</li>
+</ul>
+</div>
+
+<div class="miaScatola2">
+<b><p id="centrato2">Dispositivi di Output</p></b>
+<ol>
+  <li>Monitor</li>
+  <li>Monitor Touch Screen</li>
+  <li>Stampante</li>
+  <li>Stampante a Plotter</li>
+  <li>Casse Audio</li>
+  <li>Cuffie</li>
+  <li>Modem</li>
+  <li>Joystick</li>
+</ol>
+</div>
+
+</body>
+</html>
