@@ -1,0 +1,41 @@
+
+<html lang="en">
+
+<head>
+    <title>Array tempi click esercizio 1</title>
+    <style>
+        div{
+          width: 200px;
+          height: 200px;
+          border-width: 1px 1px 1px 1px;
+          border-style: solid;
+          border-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div"></div>
+    <button onclick="tempo()">metto tempi nell'array</button>
+    <p id="out"></p>
+
+    <script>
+        let mioarraytempi=[];
+        let tempoiniziale=Date.now();
+        function tempo() {
+            let tempodalclick=Date.now()-tempoiniziale;
+            mioarraytempi.push(tempodalclick);
+            stampaArray();
+        }
+        function stampaArray() {
+            document.getElementById("out").innerHTML=mioarraytempi;
+            if(mioarraytempi<2000){
+                document.getElementById('div').style.backgroundColor="red";
+            }
+            else{
+                document.getElementById('div').style.backgroundColor="green";
+            }
+        }
+    </script>
+</body>
+</html>
