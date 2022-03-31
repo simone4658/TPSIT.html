@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <style>
+body{
+  background-color: yellow;
+}
+.Card{
+  border: 5px solid blue;
+  background-image: linear-gradient(40deg, #fffc00 0%, #fc00ff 50%, #00fffc 100%);
+  background-color: #00ff00;
+  width: 297px;
+  height: 450px;
+  margin: auto;
+  padding: 10px;
+  padding-top: 4px;
+}
+.CardInternoBox{
+  border: 3px solid blue;
+  width: 290px;
+  height: 350px;
+}      
+p{
+  color: black;
+  text-align: center;
+  margin: 1px;
+}
+  </style>
+  </head>
+  <body>
+    <center><h1>Allievo della classe 3°B INFO</h1></center>
+    <div class="Card">
+      <p font-color="black"><b> STUDENTE </b></p>
+      <div class="CardInternoBox">
+        <font size="4px">Simone Caruso</font>
+        <img src="./imgs/logoprovvisorio.jpg" alt="images" width="290px" height="329px">
+        <font size="3px">
+          ho 16 anni, vado alla 3° superiore, vivo a Nichelino, come hobby mi piaceva tanto fare tennis e di tanto in tanto dei lavori manuali con mio padre.
+        </font>
+      </div>
+    </div>
+  </body>
+</html>
