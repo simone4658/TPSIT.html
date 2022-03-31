@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creazione di 4 box che cambiano colore</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"&gt>
+
+<style>
+div{
+  margin: 2px;
+  padding: 2px;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  display: flex;
+  float: left;
+}
+.rosso{
+  background-color: crimson;
+}
+.giallo{
+  background-color: rgb(227, 252, 8);
+}
+.blue{
+  background-color: darkblue;
+}
+.verde{
+  background-color: darkgreen;
+}
+</style>
+
+</head>
+<body>
+
+<div id="box1" class="rosso">
+  <button  onclick="cambiacolore()" class="w3-button w3-black w3-round-large">Change this color</button>
+</div>
+<div id="box2" class="verde">
+  <button  onclick="cambiacolore2()" class="w3-button w3-black w3-round-large">Change this color</button>
+</div>
+<div id="box3" class="blue">
+  <button  onclick="cambiacolore3()" class="w3-button w3-black w3-round-large">Change this color</button>
+</div>
+<div id="box4" class="giallo">
+  <button  onclick="cambiacolore4()" class="w3-button w3-black w3-round-large">Change this color</button>
+</div>
+
+<script>
+function cambiacolore() {
+  document.getElementById("box1").style.backgroundColor="orange";
+}
+function cambiacolore2() {
+  document.getElementById("box2").style.backgroundColor="purple";
+}
+function cambiacolore3() {
+  document.getElementById("box3").style.backgroundColor="aqua";
+}
+function cambiacolore4() {
+  document.getElementById("box4").style.backgroundColor="white";
+}
+</script>
+
+</body>
+</html>
