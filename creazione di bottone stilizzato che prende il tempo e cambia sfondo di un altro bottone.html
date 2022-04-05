@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <title>Creazione di un bottone stilizzato che prende il tempo e modifica sfondo di un altro bottone</title>
+</head>
+<style>
+    .miascatola {
+        height: 200px;
+        width: 200px;
+        background-color: lightcoral;
+        border-color: black;
+        border-width: 1px 1px 1px 1px;
+        border-style: solid;
+        text-align: center;
+        margin: 0 auto;
+    }
+</style>
+<script>
+    var timer=0;
+    function cambiaColore() {
+        document.getElementById("box").style.backgroundColor="yellow";
+        setInterval(function() {
+            timer=timer+1;
+            document.getElementById("timer").innerHTML=timer;
+        }, 1000);
+    }
+</script>
+
+<body>
+    <button onclick="cambiaColore()">
+        Premimi, così cambio il colore di questo quadrato e faccio partire il timer
+    </button>
+    <div class="miascatola" id="box">
+
+    </div>
+    <div>
+        <p>Timer: <span id="timer">0</span></p>
+    </div>
+</body>
+
+</html>
