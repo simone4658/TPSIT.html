@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dato il codice sotto trovare la media degli elementi dell'array e il massimo elemento dei primi 50 elementi di un array di 100 elementi</title>
+    
+    <script>
+        let arrayBello=[], num=100, indice;
+        function riempiArray(){
+            for(let i=0;i<num;i++){
+                arrayBello[i]=parseInt(Math.random()*50);
+                document.getElementById("out").innerHTML+=arrayBello[i]+" ";
+            }
+        }
+        function max(){
+            let massimo=-1;
+            for(let i=0;i<arrayBello.length;i++){
+                if(arrayBello[i]>massimo){
+                    massimo=arrayBello[i];
+                    indice=i;
+                }
+            }
+            document.getElementById("outMassimo").innerHTML+=massimo+" "+indice;
+        }
+        function media(){
+            let somma=0, media;
+            for(let i=0;i<num;i++){
+                somma+=arrayBello[i];
+            }
+            media=somma/100;
+            document.getElementById("outMedia").innerHTML+=media+" ";
+        }
+    </script>
+</head>
+<body>
+    <button onclick="riempiArray()">
+        Carica array
+    </button>
+    <button onclick="max()">
+        Massimo
+    </button>
+    <button onclick="media()">
+        Media
+    </button>
+        <p id="out">Ecco i numeri dell'array: </p>
+        <p id="outMassimo">Ecco il numero massimo e la sua posizione: </p>
+        <p id="outMedia">Ecco la media degli elementi del vettore: </p>
+</body>
+</html>
