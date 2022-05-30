@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <font color="red"><p align="center"><b>LE PORTE LOGICHE</b><p></font>
+  </head>
+  <body>
+  <style>
+body{
+background-color: lightGreen;
+}
+
+.and {
+background-color: yellow;
+}
+.and span {
+cursor: pointer;
+display: inline-block;
+position: relative;
+transition: 0.5s;
+}
+.and span:after {
+content: '\00bb';
+position: absolute;
+opacity: 0;
+top: 0;
+right: -20px;
+transition: 0.5s;
+}
+.and:hover span {
+padding-right: 25px;
+}
+.and:hover span:after {
+opacity: 1;
+right: 0;
+}
+
+.or {
+background-color: rgb(60, 179, 113);
+}
+.or span {
+cursor: pointer;
+display: inline-block;
+position: relative;
+transition: 0.5s;
+}
+.or span:after {
+content: '\00bb';
+position: absolute;
+opacity: 0;
+top: 0;
+right: -20px;
+transition: 0.5s;
+}
+.or:hover span {
+padding-right: 25px;
+}
+.or:hover span:after {
+opacity: 1;
+right: 0;
+}
+
+.not {
+background-color: #008CBA;
+}
+.not span {
+cursor: pointer;
+display: inline-block;
+position: relative;
+transition: 0.5s;
+}
+.not span:after {
+content: '\00bb';
+position: absolute;
+opacity: 0;
+top: 0;
+right: -20px;
+transition: 0.5s;
+}
+.not:hover span {
+padding-right: 25px;
+}
+.not:hover span:after {
+opacity: 1;
+right: 0;
+}
+
+.nand {
+background-color: grey;
+}
+.nand span {
+cursor: pointer;
+display: inline-block;
+position: relative;
+transition: 0.5s;
+}
+.nand span:after {
+content: '\00bb';
+position: absolute;
+opacity: 0;
+top: 0;
+right: -20px;
+transition: 0.5s;
+}
+.nand:hover span {
+padding-right: 25px;
+}
+.nand:hover span:after {
+opacity: 1;
+right: 0;
+}
+
+.nor {
+background-color: rgb(255, 150, 0);
+}
+.nor span {
+cursor: pointer;
+display: inline-block;
+position: relative;
+transition: 0.5s;
+}
+.nor span:after {
+content: '\00bb';
+position: absolute;
+opacity: 0;
+top: 0;
+right: -20px;
+transition: 0.5s;
+}
+.nor:hover span {
+padding-right: 25px;
+}
+.nor:hover span:after {
+opacity: 1;
+right: 0;
+}
+</style>
+  <button type="button" class="and" style="vertical-align:middle" onclick="document.getElementById('and').src='AND.jpg'"><span>clicca qui per vedere la tabella di verità dell'AND</span></button>
+  <img id="and" src="AND.jpg" style="width:200; height:100;">
+<br><br>
+  <button type="button" class="or" style="vertical-align:middle" onclick="document.getElementById('or').src='OR.jpg'"><span>clicca qui per vedere la tabella di verità dell'OR</span></button>
+  <img id="or" src="OR.jpg" style="width:200; height:100;">
+<br><br>
+  <button type="button" class="not" style="vertical-align:middle" onclick="document.getElementById('not').src='NOT.jpg'"><span>clicca qui per vedere la tabella di verità dell'NOT</span></button>
+  <img id="not" src="NOT.jpg" style="width:200; height:100;">
+<br><br>
+  <button type="button" class="nand" style="vertical-align:middle" onclick="document.getElementById('nand').src='NAND.jpg'"><span>clicca qui per vedere la tabella di verità dell'NAND</span></button>
+  <img id="nand" src="NAND.png" style="width:200; height:100;">
+<br><br>
+  <button type="button" class="nor" style="vertical-align:middle" onclick="document.getElementById('nor').src='NOR.png'"><span>clicca qui per vedere la tabella di verità dell'NOR</span></button>
+  <img id="nor" src="NOR.png" style="width:200; height:100;">
+  </body>
+</html>
