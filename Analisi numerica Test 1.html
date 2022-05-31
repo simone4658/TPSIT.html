@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisi numerica Test 1</title>
+</head>
+<body>
+    <style>
+        .Card{
+          border: 5px solid blue;
+          background-image: linear-gradient(40deg, #fffc00 0%, #fc00ff 50%, #00fffc 100%);
+          background-color: #00ff00;
+          width: 297px;
+          height: 400px;
+          margin: auto;
+          padding: 10px;
+          padding-top: 4px;
+        }
+        .CardInternoBox{
+          border: 3px solid blue;
+          width: 290px;
+          height: 350px;
+        }      
+        p{
+          color: black;
+          text-align: center;
+          margin: 1px;
+        }
+    </style>
+    <center><h1>Fattorizzzazione di n numeri a piacere</h1></center>
+    <div class="Card">
+      <p font-color="black"><b> Fattorizzazione: </b></p>
+      <div class="CardInternoBox">
+        <p>
+        <script>
+          function fattorizzatore(n){
+            let stringaFattori="";
+            let fineciclo=n/2;
+            for(let fattore=1;fattore<=fineciclo;fattore++){
+              if(n%fattore==0){
+                stringaFattori=stringaFattori+fattore+" ";
+              }
+            }
+          return stringaFattori;
+          }
+          function maxFattori(limiteSuperiore){
+            let nfattori;
+            let nfattorimax=1;
+            let n_max=1;
+            for(let fattore=1;fattore<limiteSuperiore;fattore++){
+              nfattori=fattorizzatore(fattore).length;
+              if(nfattori>=nfattorimax){
+                nfattorimax=nfattori;
+                n_max=fattore;
+              }
+            }
+            return n_max;
+          }
+          document.write("Il numero minore di mille che ha più fattori è: "+maxFattori(1000));
+        </script>
+        </p>
+      </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisi numerica Test 2</title>
+</head>
+<body>
+    <style>
+        .Card{
+          border: 5px solid blue;
+          background-image: linear-gradient(40deg, #fffc00 0%, #fc00ff 50%, #00fffc 100%);
+          background-color: #00ff00;
+          width: 297px;
+          height: 400px;
+          margin: auto;
+          padding: 10px;
+          padding-top: 4px;
+        }
+        .CardInternoBox{
+          border: 3px solid blue;
+          width: 290px;
+          height: 350px;
+        }      
+        p{
+          color: black;
+          text-align: center;
+          margin: 1px;
+        }
+    </style>
+    <center><h1>Fattorizzzazione di n numeri a piacere</h1></center>
+    <div class="Card">
+      <p font-color="black"><b> Fattorizzazione: </b></p>
+      <div class="CardInternoBox">
+        <p>
+        <script>
+          function fattorizzatore(n){
+            let stringaFattori="";
+            let fineciclo=n/2;
+            for(let fattore=1;fattore<=fineciclo;fattore++){
+              if(n%fattore==0){
+                stringaFattori=stringaFattori+fattore+" ";
+              }
+            }
+          return stringaFattori;
+          }
+          function maxFattori(limiteSuperiore){
+            let nfattori;
+            let nfattorimax=1;
+            let n_max=1;
+            for(let fattore=1;fattore<limiteSuperiore;fattore++){
+              nfattori=fattorizzatore(fattore).length;
+              if(nfattori>=nfattorimax){
+                nfattorimax=nfattori;
+                n_max=fattore;
+              }
+            }
+            return n_max;
+          }
+        function primo(n){ //restituisco true se n è primo e false altrimenti
+            if(n == 1){
+              return false; //1 non e' primo
+            }
+            let fine_ciclo = n/2;
+            for(i = 2; i < fine_ciclo; i++){
+                if(n%i == 0){ //se i divide n
+                  return false; // il numero non e' primo
+                }
+            }
+            return true; //se sopravvivo al for il numero e' primo
+        }
+        function fattori_totali(fine = 1000){ //restituisce la quantità totale di fattori dei numeri non primi compresi fra 1 e 1000 (escluso)
+            let numero_di_fattori_totali = 0; //contiene quanti fattori incontro da 1 fino a 1000
+            for(let i = 1; i < fine; i++){
+                if(!primo(i)){
+                  let fattori = fattorizzatore(i).split(" "); //array che contiene tutti i fattori più lo spazio finale
+                    //es: se i = 4, allora:
+                    /*
+                        fattorizzatore(4) è la stringa "1 2 "
+                        fattorizzatore(4).split(" ") è l'array ["1", "2", ""]
+                        fattori = ["1", "2", ""]
+                        n_fattori = fattori.length - 1
+                    */
+                  let numero_fattori = fattori.length - 1; //metto -1 perché così non conto lo spazio finale             
+                  numero_di_fattori_totali = numero_di_fattori_totali+ numero_fattori; //aggiungo ai fattori totali il numero di fattori di i
+                }
+            }
+            return numero_di_fattori_totali;
+        
+        }
+        document.write("La somma di tutti i fattori esclusi i fattori dei numeri primi è di: "+fattori_totali(1000));
+        </script> </p>
+      </div>
+    </div>
+</body>
+</html>
