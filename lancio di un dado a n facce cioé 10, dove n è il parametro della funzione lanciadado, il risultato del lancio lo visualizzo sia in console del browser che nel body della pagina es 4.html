@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>lancio un dado a n° facce (cioé 10, dove n°--> parametro della funzione "lanciadado"), il risultato del lancio lo visualizzo sia in console del browser che nel body della pagina</title>
+  
+</head>
+<body>
+    <script>
+        function lanciadado(n){
+            let dado=0;
+            dado=Math.round((Math.random())*n)+1;
+            document.write(dado);
+            console.log(dado);
+        }
+        lanciadado(10);
+    </script>
+</body>
+
+</html>
