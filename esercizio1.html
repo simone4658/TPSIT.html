@@ -1,0 +1,44 @@
+<SCRIPT Language='JavaScript'>
+
+    function inizia(){
+       var a=document.getElementById('A');
+       
+       setInterval(function () {
+          R=parseInt(Math.random()*255);
+          G=parseInt(Math.random()*255);
+          B=parseInt(Math.random()*255);
+          a.style.backgroundColor=(R, G, B);
+       }, 500);
+    }
+    
+</SCRIPT>
+    
+    
+    <HTML>
+       <HEAD>
+       <TITLE>esercizio1</TITLE>
+       </HEAD>
+    
+       <style type="text/css">
+         
+          #A{
+             left: 100px;
+             top: 50px;
+             background-color: white;
+             position: absolute;
+             height: 100px;
+             width: 100px;
+             border-width: 1px;
+             border: solid black;
+          }
+    
+       </style>
+    
+    
+       <BODY onLoad="inizia()">
+    
+        <DIV id='A'></DIV>
+    
+       </BODY>
+    
+    </HTML>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>dato il lancio del dado dell'es 1 visualizzare un puntino rosso a video se il numero uscito è > (n/2)</title>
+  
+</head>
+<body>
+    <script>
+        function lanciadado(n){
+            let dado=0;
+            dado=Math.round((Math.random())*n)+1;
+            document.write(dado);
+            console.log(dado);
+            if(dado>(n/2)){
+              document.write("<font color='red'>.</font>");
+            }
+        }
+        lanciadado(6);
+    </script>
+</body>
+
+</html>
