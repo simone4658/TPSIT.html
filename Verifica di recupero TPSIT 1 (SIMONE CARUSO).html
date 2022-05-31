@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Verifica di recupero TPSIT (1)</title>
+</head>
+
+<SCRIPT Language='JavaScript'>
+
+    function inizia() {
+       var a=document.getElementById('quad');
+       var b=document.getElementById('quad2');
+       var c=document.getElementById('quad3');
+       var d=document.getElementById('quad4');
+       var colore = new Array();
+
+       /*if(a.style.backgroundColor='red'){
+           a.style.backgroundColor=colore[1];
+       }
+       if(a.style.backgroundColor='green'){
+           a.style.backgroundColor=colore[2];
+       }
+       if(a.style.backgroundColor='blue'){
+           a.style.backgroundColor=colore[0];
+       }
+
+       if(b.style.backgroundColor='red'){
+           b.style.backgroundColor=colore[1];
+       }
+       if(b.style.backgroundColor='green'){
+           b.style.backgroundColor=colore[2];
+       }
+       if(b.style.backgroundColor='blue'){
+           b.style.backgroundColor=colore[0];
+       }
+
+       if(c.style.backgroundColor='red'){
+           c.style.backgroundColor=colore[1];
+       }
+       if(c.style.backgroundColor='green'){
+           c.style.backgroundColor=colore[2];
+       }
+       if(c.style.backgroundColor='blue'){
+           c.style.backgroundColor=colore[0];
+       }
+
+       if(d.style.backgroundColor='red'){
+           d.style.backgroundColor=colore[1];
+       }
+       if(d.style.backgroundColor='green'){
+           d.style.backgroundColor=colore[2];
+       }
+       if(d.style.backgroundColor='blue'){
+           d.style.backgroundColor=colore[0];
+       }*/
+
+       colore[0]='red';
+       colore[1]='green';
+       colore[2]='blue';
+
+       setInterval(function () {
+        x=parseInt(Math.random()*3);
+        a.style.backgroundColor=colore[x];
+        b.style.backgroundColor=colore[x];
+        c.style.backgroundColor=colore[x];
+        d.style.backgroundColor=colore[x];
+       }, 500);
+    }
+    
+</SCRIPT>
+
+<style>
+    #quad{
+        height: 100px;
+        width: 100px;
+        border: solid black 2px;
+        float: left;
+        margin-left: 5px;
+    }
+    #quad2{
+        height: 100px;
+        width: 100px;
+        border: solid black 2px;
+        float: left;
+        margin-left: 5px;
+    }
+    #quad3{
+        height: 100px;
+        width: 100px;
+        border: solid black 2px;
+        float: left;
+        margin-left: 5px;
+    }
+    #quad4{
+        height: 100px;
+        width: 100px;
+        border: solid black 2px;
+        float: left;
+        margin-left: 5px;
+    }
+</style>
+
+<body onload="inizia()">
+    <div id="quad"></div>
+    <div id="quad2"></div>
+    <div id="quad3"></div>
+    <div id="quad4"></div>
+</body>
+
+</html>

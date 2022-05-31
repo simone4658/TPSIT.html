@@ -1,0 +1,81 @@
+<HTML>
+   <HEAD>
+   <TITLE>Verifica di TPSIT (1)</TITLE>
+   </HEAD>
+
+   <style type="text/css">
+     
+      #B {
+         left: 0px;
+         top: 0px;
+         background-color: green;
+         color: black;
+         position: absolute;
+         height: 90px;
+         width: 90px;
+         text-align: center;
+         font-size: 20px;
+         border-width: 1px;
+         border: solid black 2px;
+         animation: mysecond 5s;
+      }
+      #A {
+         left: 200px;
+         top: 0px;
+         background-color: red;
+         color: black;
+         position: absolute;
+         height: 90px;
+         width: 90px;
+         text-align: center;
+         font-size: 20px;
+         border-width: 1px;
+         border: solid black 2px;
+         animation: myfirst 5s;
+      }
+
+@keyframes mysecond {
+  0%   {
+     background: green;
+     left: 200px;
+     top: 0px;
+  }
+  50%  {
+     background: green;
+     left: 0px;
+     top: 200px;
+  }
+  100% {
+     background: green;
+     left: 0px; 
+     top: 0px;
+  }
+}
+@keyframes myfirst {
+  0%   {
+     background: red;
+     left: 0px;
+     top: 0px;
+  }
+  50%  {
+     background: red;
+     left: 200px;
+     top: 200px;
+  }
+  100% {
+     background: red;
+     left: 200px;
+     top: 0px;
+  }
+}
+
+   </style>
+
+   <BODY>
+
+    <DIV id='B'></DIV>
+    <DIV id='A'></DIV>
+   
+   </BODY>
+
+</HTML>

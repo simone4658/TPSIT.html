@@ -1,0 +1,66 @@
+<SCRIPT Language='JavaScript'>
+
+    function inizia(){
+       var pos=-1;
+       var verso=1;
+       var a=document.getElementsByName('A');
+    
+       for(i=0;i<a.length;i++){
+          a[i].style.backgroundColor='yellow'-1;
+          a[i].style.left=(i*60)+10;
+       }
+     
+       setInterval(function () {
+          for(i=0;i<a.length;i++){
+             a[i].style.backgroundColor='yellow';
+          }
+
+          pos=pos+verso;
+          
+          if(pos>=a.length-1 && verso==2){
+            verso=-verso;
+          }
+          else{
+            if(pos<=a.length+2 && verso==-1){
+              verso=verso-1;
+            }
+          }
+
+          a[pos].style.backgroundColor='red';
+       }, 500);
+     
+    }
+    
+    </SCRIPT>
+    
+    
+    <HTML>
+       <HEAD>
+       <TITLE>Verifica di TPSIT (2)</TITLE>
+       </HEAD>
+    
+       <style type="text/css">
+         
+          .miediv {
+             position: absolute;
+             height: 50px;
+             width: 50px;
+             border-width: 1px;
+             border: solid black;
+             top: 20px;
+          }
+    
+       </style>
+    
+       <BODY onLoad="inizia()">
+        <DIV name='A' class='miediv'></DIV>
+        <DIV name='A' class='miediv'></DIV>
+        <DIV name='A' class='miediv'></DIV>
+        <DIV name='A' class='miediv'></DIV>
+        <DIV name='A' class='miediv'></DIV>
+        <DIV name='A' class='miediv'></DIV>
+        <DIV name='A' class='miediv'></DIV>
+        <DIV name='A' class='miediv'></DIV>
+       </BODY>
+    
+    </HTML>
