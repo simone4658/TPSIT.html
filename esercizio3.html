@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <title>esercizio3</title>
+
+<style type="text/css">
+
+    .coloreblu{
+        height: 100px;
+        width: 100px;
+        background-color: blue;
+        border-width: 1px;
+        border: solid black;
+    }
+    .coloregiallo{
+        height: 100px;
+        width: 100px;
+        background-color: yellow;
+        border-width: 1px;
+        border: solid black;
+    }
+
+</style>
+
+<body>
+  <div id="coloreblu" class="coloreblu"></div>
+  <div id="coloregiallo" class="coloregiallo"></div>
+</body>
+
+<script>
+    function inizia() {
+        var b=document.getElementById('coloreblu');
+        var a=document.getElementById('coloregiallo');
+        setInterval(function inizia() {
+            var al = Math.round(Math.random() * (maxLeft + 1));
+            var at = Math.round(Math.random() * (maxTop + 1));
+            /*al=parseInt(Math.random()*200);
+            at=parseInt(Math.random()*200);*/
+            a.style.left=al;
+            a.style.top=at;
+        }, 500);
+    }
+    function rimedio(al, at) {
+        for(i=0;i<500;i++){
+            al=parseInt(Math.random()*200);
+            at=parseInt(Math.random()*200);
+            a.style.left=al;
+            a.style.top=at;
+        }
+    }
+    function colorerosso(al, at) {
+        if((document.getElementById("coloreblu").style.width==al+100)==(document.getElementById("coloregiallo").style.width==al+100) && (document.getElementById("coloreblu").style.height==at+100)==(document.getElementById("coloregiallo").style.height==at+100)){
+          document.getElementById("coloreblu").style.backgroundcolor="red";
+          document.getElementById("coloregiallo").style.backgroundcolor="red";
+        }
+    }
+
+    function moveDiv() {
+    var $span = $("#random");
+    $span.fadeOut(500, function() {
+        var maxLeft = $(window).width() - $span.width();
+        var maxTop = $(window).height() - $span.height();
+        var leftPos = Math.floor(Math.random() * (maxLeft + 1))
+        var topPos = Math.floor(Math.random() * (maxTop + 1))
+
+        $span.css({ left: leftPos, top: topPos }).fadeIn(1000);
+    });
+};
+moveDiv();
+setInterval(moveDiv, 500);
+
+$(document).ready(function() {
+    randoBox = {
+      width:$("body").width(),
+      height:$("body").height(),
+      x:0,
+      y:0,
+      el:null,
+      time:1000,
+      state:"active",
+      init: function(){
+        el = $(document.createElement('div'));
+        el.attr("style","position:absolute;left:"+this.x+";top:"+this.y+";");
+        el.html("DVD")            
+        el.height(100);
+        el.width(100);
+        $("body").append(el);
+      },
+      move:function(){
+        this.y = Math.random()*this.height+1;
+        this.x = Math.random()*this.width+1;
+        el.attr("style","position:absolute;left:"+this.x+";top:"+this.y+";");            
+      },
+      run:function(state){
+        if (this.state == "active" || state){
+          this.move();
+          setTimeout(function(){this.run()},this.time);
+        }
+      }
+    }
+    randoBox.init();
+    randoBox.run(true);
+});
+</script>
+
+</html>

@@ -1,0 +1,67 @@
+<SCRIPT Language='JavaScript'>
+
+    function inizia() {
+      var pos=-1;
+      var verso=1;
+      var a=document.getElementsByName('A');
+      var colR=[7];
+      var colG=[7];
+       for(i=0;i<7;i++){
+          colR[i]=255;
+          colG[i]=255;
+       }
+
+       for(i=0;i<a.length;i++){
+          a[i].style.left=(i*60)+10;
+       }
+
+       setInterval(function () {
+         pos=parseInt(Math.random()*7);
+         divrand=parseInt(Math.random()*7);
+         pos=pos+verso;
+         colR[divrand]-=5;
+         colG[divrand]-=5;
+          a[divrand].style.backgroundColor='rgb('+colR[divrand]+ ','+ colG[divrand] + ',' + 255 + ')';
+          if(colR[divrand]<=0){
+            a[divrand].style.backgroundColor = 'white';
+            a[divrand].style.border = '0px';
+          }
+          
+          if(pos>=a.length-1 && verso==1){
+            verso=-verso;
+          }
+          else{
+            if(pos<=0 && verso==-1){
+                verso=-verso;
+            }
+          }
+       }, 30);
+    }
+    
+</SCRIPT>
+    <html>
+      <head>
+   <title>esercizio4</title>
+      </head>
+        <style type="text/css">
+          .miediv{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-width: 1px;
+            border: solid 1px black;
+            top: 20px;
+          }
+       </style>
+    
+      <body onLoad="inizia()">
+        <div name='A' class='miediv'></div>
+        <div name='A' class='miediv'></div>
+        <div name='A' class='miediv'></div>
+        <div name='A' class='miediv'></div>
+        <div name='A' class='miediv'></div>
+        <div name='A' class='miediv'></div>
+        <div name='A' class='miediv'></div>
+      </body>
+    
+    </html>
