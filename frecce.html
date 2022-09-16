@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+    <title>Realizzare pagina html con frecce direzione</title>
+</head>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        .column{
+          float: left;
+          width: 220px;
+          height: 220px;
+        }
+        .divContenitore{
+          background-color: darkgreen;
+          height: 900px;
+          width: 900px;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+    </style>
+</head>
+
+<body>
+<script>
+    var vCont=0;
+    function verticali(direzione){
+        console.log('verticale premuto', vCont);
+        if(direzione=='su'){
+          vCont++;
+        }
+        else{
+          vCont--;
+        }
+        document.getElementById('stampaVerticali').innerText=vCont;
+    }
+    var oCont=0;
+    function orizzontali(direzione){
+        console.log('orizzontale premuto', oCont);
+        if(direzione=='destra'){
+          oCont++;
+        }
+        else{
+          oCont--;
+        }
+        document.getElementById('stampaOrizzontali').innerText=oCont;
+    }
+</script>
+<div class="divContenitore">
+    <center>
+        <div class="row">
+        <div class="column" style="background-color: rgb(255, 0, 0);"></div>
+        <div class="column" style="background-color: aqua;">
+            <center><button type="button" onclick="verticali('su')">
+                <img src="freccia su.jpg" height="200px" width="200px">
+            </button></center>
+        </div>
+        <div class="column" style="background-color: rgb(255, 0, 0);"></div>
+        </div>
+
+        <div class="row">
+        <div class="column" style="background-color: aqua;">
+            <center><button type="button" onclick="orizzontali('sinistra')">
+                <img src="freccia sinistra.jpg" height="200px" width="200px">
+            </button></center>
+        </div>
+        <div class="column" style="background-color: rgb(255, 0, 0);"></div>
+        <div class="column" style="background-color: aqua;">
+            <center><button type="button" onclick="orizzontali('destra')">
+                <img src="freccia destra.jpg" height="200px" width="200px">
+            </button></center>
+        </div>
+        </div>
+
+        <div class="row">
+        <div class="column" style="background-color: rgb(255, 0, 0);"></div>
+        <div class="column" style="background-color: aqua;">
+            <center><button type="button" onclick="verticali('giu')">
+                <img src="freccia giu.jpg" height="200px" width="200px">
+            </button></center>
+        </div>
+        <div class="column" style="background-color: rgb(255, 0, 0);"></div>
+        </div>
+    </center>
+</div>
+<p>Tasti verticali: <span id="stampaVerticali"></span></p>
+<p>Tasti orizzontali: <span id="stampaOrizzontali"></span></p>
+</body>
+</html>
